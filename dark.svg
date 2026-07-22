@@ -44,15 +44,25 @@
       <stop offset="100%" stop-color="#030712" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Typing Animation Clip Paths -->
+    <!-- EN & VN Typing Animation Clip Paths (4 Steps) -->
     <clipPath id="type-clip-1">
       <rect x="0" y="-20" width="0" height="40">
-        <animate attributeName="width" values="0; 520; 520; 0; 0" keyTimes="0; 0.2; 0.4; 0.45; 1" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0; 470; 470; 0; 0" keyTimes="0; 0.1; 0.2; 0.25; 1" dur="24s" repeatCount="indefinite" />
       </rect>
     </clipPath>
     <clipPath id="type-clip-2">
       <rect x="0" y="-20" width="0" height="40">
-        <animate attributeName="width" values="0; 0; 0; 520; 520; 0; 0" keyTimes="0; 0.45; 0.5; 0.7; 0.9; 0.95; 1" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0; 0; 450; 450; 0; 0" keyTimes="0; 0.25; 0.35; 0.45; 0.5; 1" dur="24s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="type-clip-3">
+      <rect x="0" y="-20" width="0" height="40">
+        <animate attributeName="width" values="0; 0; 510; 510; 0; 0" keyTimes="0; 0.5; 0.6; 0.7; 0.75; 1" dur="24s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="type-clip-4">
+      <rect x="0" y="-20" width="0" height="40">
+        <animate attributeName="width" values="0; 0; 550; 550; 0" keyTimes="0; 0.75; 0.85; 0.95; 1" dur="24s" repeatCount="indefinite" />
       </rect>
     </clipPath>
   </defs>
@@ -70,7 +80,6 @@
   <!-- Left Panel (Tux Penguin) -->
   <g transform="translate(30, 30)">
     <rect width="400" height="550" rx="12" class="glass-panel" />
-    <!-- Window Dots -->
     <circle cx="20" cy="20" r="6" fill="#EF4444" />
     <circle cx="40" cy="20" r="6" fill="#F59E0B" />
     <circle cx="60" cy="20" r="6" fill="#10B981" />
@@ -78,41 +87,24 @@
 
     <!-- Tux Drawing -->
     <g transform="translate(100, 100)">
-      <!-- Süzülme Animasyonu -->
       <animateTransform attributeName="transform" type="translate" values="100,100; 100,90; 100,100" dur="4s" repeatCount="indefinite" />
-      
-      <!-- Arka Işık -->
       <circle cx="100" cy="110" r="100" fill="url(#ascii-grad)" filter="url(#glow)" opacity="0.3" />
       
-      <!-- Sol Kanat -->
       <path d="M 40 100 C 10 130 0 170 30 190 C 40 160 50 130 50 110 Z" fill="#111827" />
-      <!-- Sağ Kanat -->
       <path d="M 160 100 C 190 130 200 170 170 190 C 160 160 150 130 150 110 Z" fill="#111827" />
-      
-      <!-- Ana Vücut (Siyah) -->
       <path d="M 50 130 C 30 80 50 20 100 20 C 150 20 170 80 150 130 C 180 190 160 210 100 210 C 40 210 20 190 50 130 Z" fill="#111827" />
-      
-      <!-- Göbek (Beyaz) -->
       <path d="M 65 145 C 50 100 70 55 100 55 C 130 55 150 100 135 145 C 160 200 130 205 100 205 C 70 205 40 200 65 145 Z" fill="#F8FAFC" />
-      
-      <!-- Sol Ayak -->
       <ellipse cx="65" cy="205" rx="25" ry="12" fill="#F59E0B" transform="rotate(15 65 205)" />
-      <!-- Sağ Ayak -->
       <ellipse cx="135" cy="205" rx="25" ry="12" fill="#F59E0B" transform="rotate(-15 135 205)" />
-      
-      <!-- Gözler (Dış) -->
       <ellipse cx="85" cy="70" rx="14" ry="18" fill="#F8FAFC" />
       <ellipse cx="115" cy="70" rx="14" ry="18" fill="#F8FAFC" />
-      <!-- Gözler (İç) -->
       <ellipse cx="88" cy="73" rx="6" ry="8" fill="#111827" />
       <ellipse cx="112" cy="73" rx="6" ry="8" fill="#111827" />
-      <!-- Gaga -->
       <path d="M 90 95 Q 100 85 110 95 Q 115 110 100 115 Q 85 110 90 95 Z" fill="#F59E0B" />
     </g>
 
     <text x="200" y="370" text-anchor="middle" class="font-mono text-primary" font-size="14" fill="#22D3EE" font-weight="600">[ KERNEL.READY ]</text>
     <text x="200" y="395" text-anchor="middle" class="font-mono text-muted" font-size="12">> TUX DAEMON RUNNING...</text>
-    
     <rect x="290" y="385" width="6" height="12" fill="#22D3EE">
       <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
     </rect>
@@ -121,7 +113,6 @@
   <!-- RIGHT PANEL (Content) -->
   <g transform="translate(450, 30)">
     <rect width="700" height="550" rx="12" class="glass-panel" />
-    
     <circle cx="20" cy="20" r="6" fill="#EF4444" />
     <circle cx="40" cy="20" r="6" fill="#F59E0B" />
     <circle cx="60" cy="20" r="6" fill="#10B981" />
@@ -130,7 +121,7 @@
     <text x="40" y="100" class="font-sans text-muted" font-size="20" font-weight="500">Hi 👋 I'm</text>
     <text x="40" y="150" class="font-sans" font-size="48" font-weight="700" fill="url(#text-gradient)">Can Calkan</text>
 
-    <!-- Animated Typing -->
+    <!-- Animated Typing with 4 Sentences -->
     <g transform="translate(40, 200)">
       <text class="font-mono text-primary" font-size="20" clip-path="url(#type-clip-1)">
         > English Teacher &amp; Tech Ed Specialist
@@ -138,8 +129,15 @@
       <text class="font-mono text-primary" font-size="20" clip-path="url(#type-clip-2)">
         > AI in Education &amp; Gamification Dev
       </text>
+      <text class="font-mono text-primary" font-size="20" clip-path="url(#type-clip-3)">
+        > Giáo viên Tiếng Anh &amp; Chuyên gia EdTech
+      </text>
+      <text class="font-mono text-primary" font-size="20" clip-path="url(#type-clip-4)">
+        > Phát triển AI &amp; Gamification trong Giáo dục
+      </text>
+      <!-- Sequenced Cursor X position -->
       <rect x="0" y="-18" width="12" height="24" fill="#10B981">
-        <animate attributeName="x" values="0; 480; 480; 0; 0; 0; 0; 450; 450; 0; 0" keyTimes="0; 0.2; 0.4; 0.45; 0.49; 0.5; 0.7; 0.9; 0.95; 0.99; 1" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="x" values="0; 460; 460; 0; 440; 440; 0; 500; 500; 0; 540; 540; 0" keyTimes="0; 0.1; 0.2; 0.25; 0.35; 0.45; 0.5; 0.6; 0.7; 0.75; 0.85; 0.95; 1" dur="24s" repeatCount="indefinite" />
         <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite" />
       </rect>
     </g>
@@ -167,20 +165,17 @@
     <g transform="translate(40, 410)">
       <text class="font-sans text-muted" font-size="14" font-weight="600" y="0">TECH &amp; EDTECH STACK</text>
       <g transform="translate(0, 20)">
-        <!-- Row 1 -->
         <g transform="translate(0,0)"><rect width="135" height="32" rx="16" class="pill"/><text x="67.5" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">English Teaching</text></g>
         <g transform="translate(145,0)"><rect width="215" height="32" rx="16" class="pill"/><text x="107.5" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">Teaching Materials Creation</text></g>
         <g transform="translate(370,0)"><rect width="90" height="32" rx="16" class="pill"/><text x="45" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">WordPress</text></g>
         <g transform="translate(470,0)"><rect width="90" height="32" rx="16" class="pill"/><text x="45" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">MS Office</text></g>
         <g transform="translate(570,0)"><rect width="55" height="32" rx="16" class="pill"/><text x="27.5" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">SQL</text></g>
         
-        <!-- Row 2 -->
         <g transform="translate(0,42)"><rect width="365" height="32" rx="16" class="pill"/><text x="182.5" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">Enterprise Information Technologies (SAP, Oracle)</text></g>
         <g transform="translate(375,42)"><rect width="85" height="32" rx="16" class="pill"/><text x="42.5" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">AI Tools</text></g>
         <g transform="translate(470,42)"><rect width="105" height="32" rx="16" class="pill"/><text x="52.5" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">Gamification</text></g>
         <g transform="translate(585,42)"><rect width="50" height="32" rx="16" class="pill"/><text x="25" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">Git</text></g>
 
-        <!-- Row 3 -->
         <g transform="translate(0,84)"><rect width="90" height="32" rx="16" class="pill"/><text x="45" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">HTML/XML</text></g>
         <g transform="translate(100,84)"><rect width="55" height="32" rx="16" class="pill"/><text x="27.5" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">CSS</text></g>
         <g transform="translate(165,84)"><rect width="95" height="32" rx="16" class="pill"/><text x="47.5" y="21" text-anchor="middle" class="font-sans text-primary" font-size="13">JavaScript</text></g>
